@@ -30,12 +30,18 @@ body {
 .display {
     grid-area: display;
 
-    width: 100%;
+    width: 350px;
     height: 100%;
 
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: flex-end;
+    align-items: center;
 
-    text-align: right;
+    overflow: hidden;
+
+    padding: 20px;
 
     background-color: black;
     color: white;
