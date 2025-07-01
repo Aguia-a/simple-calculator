@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0,0,0,0.1);
+
+    font-family: "Space Mono", monospace;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.calculator {
+    width: 350px;
+    height: 500px;
+
+    margin: 100px auto;
+
+    display: grid;
+
+    border: 1px solid black;
+
+    grid-template-rows: 1fr 4fr;
+
+    grid-template-areas:
+    "display        display     display     display"
+    "btn-wrapper    btn-wrapper btn-wrapper btn-wrapper";
+}
+
+.display {
+    grid-area: display;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    text-align: right;
+
+    background-color: black;
+    color: white;
+}
+
+.btn-wrapper {
+    grid-area: btn-wrapper;
+
+    display: grid;
+
+    grid-template-areas:
+    "clear      clear       delete      divide"
+    "seven      eight       nine        multiply"
+    "four       five        six         subtract"
+    "one        two         three       plus"
+    "zero       zero        zero        equals";
+}
+
+.btn {
+    border: 0.5px solid black;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font: inherit;
+
+    background-color: #D8D9DB;
+    color: black;
+}
+
+.btn:hover {
+    background-color: rgba(216, 217, 219, 0.3);
+}
+
+.btn:active {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.btn-orange {
+    background-color: #DF974C;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: rgba(223, 151, 76, 0.6);
+}
+
+.btn-orange:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-clear {
+    grid-area: clear;
+}
+
+.btn-delete {
+    grid-area: delete;
+}
+
+.btn-divide {
+    grid-area: divide;
+}
+
+.btn-7 {
+    grid-area: seven;
+}
+
+.btn-8 {
+    grid-area: eight;
+}
+
+.btn-9 {
+    grid-area: nine;
+}
+
+.btn-multiply {
+    grid-area: multiply;
+}
+
+.btn-4 {
+    grid-area: four;
+}
+
+.btn-5 {
+    grid-area: five;
+}
+
+.btn-6 {
+    grid-area: six;
+}
+
+.btn-subtract {
+    grid-area: subtract;
+}
+
+.btn-1 {
+    grid-area: one;
+}
+
+.btn-2 {
+    grid-area: two;
+}
+
+.btn-3 {
+    grid-area: three;
+}
+
+.btn-plus {
+    grid-area: plus;
+}
+
+.btn-0 {
+    grid-area: zero;
+}
+
+.btn-equals {
+    grid-area: equals;
+}
